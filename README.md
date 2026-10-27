@@ -1,19 +1,33 @@
 # 观微 · 人文社科研究工作台
 
-本地优先的文献、阅读批注、证据与写作工作台。当前仓库用于开发测试下载与现场联机验证，尚不是正式稳定版。
+本地优先的文献整理、PDF阅读批注、研究证据和写作工作台。当前提供开发测试版，尚不是正式稳定版。
 
-## Windows跨网络联机测试
+## 直接下载 beta.63
 
-到 Releases 下载 `Guanwei-Team-Test-Windows-x64-20261026.zip`。这个测试包基于已检查的 **0.38.0-beta.7联机版**，不包含后续最新UI开发预览。
+**[下载 Windows x64 测试版](https://github.com/LHT666-hub/guanwei-workbench/releases/download/v0.38.0-beta.63/Guanwei-0.38.0-beta.63-Windows-x64.zip)**
 
-1. 完整解压全部文件，不要在ZIP内运行。
-2. Windows连接手机热点，Mac保持原网络，双方保持工作台打开。
-3. 双击根目录 `Start-Team-Test.cmd`，无需安装Node或开发环境。
-4. 在「资料分享 → 团队知识库」选择加入，私下交换邀请与申请连接码，管理员确认授权。
-5. 使用 `field-test/Synthetic-Team-Test.pdf` 验证全文和第2页批注，再验证管理员汇总发布、自动接收、离线补收和本地冲突保护。
+**[下载 Mac Apple芯片测试版](https://github.com/LHT666-hub/guanwei-workbench/releases/download/v0.38.0-beta.63/Guanwei-0.38.0-beta.63-mac-arm64.zip)**
 
-测试使用独立资料库。运行后生成的 `field-test/windows-profile` 含设备身份，**不要上传或转发它**。发行包只包含应用、公开合成PDF、启动脚本和说明。不要上传真实研究材料进行公开测试。
+[发布说明及SHA256校验文件](https://github.com/LHT666-hub/guanwei-workbench/releases/tag/v0.38.0-beta.63)
 
-Syncthing帮助已授权电脑直接或经加密中继传输文件，不提供离线云存储；当前需管理员与对应成员同时在线。Windows真机和不同物理网络现场验收尚未完成，不能将测试版下载等同于联机已通过。
+完整解压所有文件。Windows双击 `Start-Team-Test.cmd`；Mac双击 `Start-Mac-Test.command`。不需要Node或源码，使用独立测试资料库。
 
-详见发行包 `START-HERE.txt` 与 `field-test/READ-ME.md`。校验值见同版本 `SHA256SUMS.txt`。
+## 本轮新功能
+
+- 先选文字高亮和颜色，再拖选文字即可连续标记；再次点击或Esc退出。
+- 8种颜色和自定义颜色，扫描PDF可使用区域高亮。
+- 自由画笔与线宽、可编辑和拖动的页面文本框、整条擦除的橡皮。
+- 工具栏撤销标记，保存重开及分享包保留页面标记。
+- 包含近期窗口缩放、工具栏和首页改进。
+
+标记保存在工作台及资料分享包中，不改写原始PDF；普通PDF带标记导出尚未实现。共享新页面标记要求双方都使用beta.63或后续支持分享格式v6的版本。
+
+## 跨网络联机测试
+
+Windows使用手机热点，Mac保持另一条网络。双方保持程序打开，进入「资料分享 → 团队知识库」，私下交换邀请及申请连接码，由管理员明确确认授权。
+
+只用包内 `field-test/Synthetic-Team-Test.pdf` 验证全文、批注、管理员汇总发布、自动接收、离线补收和本地修改保护。
+
+运行后生成的 `field-test/windows-profile`、`field-test/mac-profile` 含设备身份，**不要上传或转发**。发布包不包含这些目录或真实研究材料；不要删除旧测试目录里的profile来升级。
+
+当前Mac成品已完成本轮标注操作检查；Windows真实运行和不同物理网络联机仍需现场验证。旧beta.7只保留在历史发布中，不含本轮阅读器工具。
